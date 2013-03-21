@@ -23,20 +23,21 @@ class UsuarioDB
         if ($result = $db->query($query)) {
             $fila = $result->fetch_assoc();
 
-            $this->usuario->apellido = $fila["apellido"];
-            $this->usuario->email = $fila["email"];
-            $this->usuario->foto = $fila["foto"];
-            $this->usuario->nombre = $fila["nombre"];
-            $this->usuario->user = $fila["user"];
-            return true;
-        } else
-            return false;
+            $this->usuario->setApellido($fila["apellido"]);
+            $this->usuario->setEmail($fila["email"]);
+            $this->usuario->setFoto($fila["foto"]);
+            $this->usuario->setNombre($fila["nombre"]);
+            $this->usuario->setUser($fila["user"]);
+            
+            return $this->usuario;
+        }
     }
 
     public function altaUsuario($usuario)
     {
 
-        $this->usuario->apellido = $usuario->usuario;
+        $this->usuario->apellido = $usuario->apellido;
+        $this->usuario->nombre = $usuario->nombre;
         $this->usuario->pass = $usuario->pass;
         $this->usuario->email = $usuario->email;
         $this->usuario->foto = $usuario->foto;
@@ -44,17 +45,16 @@ class UsuarioDB
         $this->usuario->user = $usuario->user;
 
         $query =    "INSERT INTO `usuario`
-    					(`id_usuario`, `email`, `foto`, `pass`, `telefono`,
-                        `foto_path`, `dni`, `sexo`, `id_permiso`) 
+    					(`id_usuario`, `user`, `pass`, `apellido`, `nombre`,
+                        `email`, `foto`) 
                     VALUES (
                     	NULL,
-                    	'$this->usuario->email',
-                    	'$this->usuario->foto',
+                    	'$this->usuario->user',
                     	'$this->usuario->pass',
-                    	'$this->usuario->telefono',
+                    	'$this->usuario->apellido',
+                    	'$this->usuario->nombre',
                     	'$this->usuario->email',
-
-
+                        '$this->usuario->foto'
                     )";
     }
 }
