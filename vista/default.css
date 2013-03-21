@@ -1,0 +1,47 @@
+
+.content{
+    width: 1000px;
+    min-height: 500px;
+    margin: 0 auto;
+    border: 2px solid green;
+}
+
+#tituloUsuario{
+    margin-left: 30px;
+    color:black;
+    font-weight: bold;
+    text-shadow: -5px 5px lightgray;
+    }
+    
+    
+    #tituloUsuario:hover{
+        color:darkred;
+        cursor: pointer;
+    }
+    
+#menu{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+    
+    #menu li{
+        padding: 10px;
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        border-radius:  2px;
+    }
+
+
+    #menu li:hover{
+        cursor: pointer;
+        background-color: darkgray;
+        color: black;
+    }
+    
+fieldset{
+    margin-left: 30px;
+    width: 500px;
+    border-radius: 5px;
+}
