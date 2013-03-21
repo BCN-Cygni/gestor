@@ -1,12 +1,13 @@
 <?php
 
-include ("../modelo/usuario.php");
+include ("cnx.php");
+include ("../class/usuario.php");
 
-class Usuario
+class UsuarioDB
 {
 
     private $usuario;
-
+    
     function __construct($usuario)
     {
         $this->usuario = $usuario;
