@@ -1,47 +1,26 @@
-
-.content{
-    width: 1000px;
-    min-height: 500px;
-    margin: 0 auto;
-    border: 2px solid green;
+body{
 }
 
-#tituloUsuario{
-    margin-left: 30px;
-    color:black;
-    font-weight: bold;
-    text-shadow: -5px 5px lightgray;
-    }
-    
-    
-    #tituloUsuario:hover{
-        color:darkred;
-        cursor: pointer;
-    }
-    
-#menu{
-    background-color: black;
-    color: white;
-    padding: 10px;
+header{
+	display: block;
+	background: url("/gestors/web/css/images/fondotitulo.png") repeat-x;
+	height: 50px;
+	margin-bottom: 30px;
+	margin-left: 0;
 }
-    
-    #menu li{
-        padding: 10px;
-        list-style: none;
-        display: inline-block;
-        vertical-align: top;
-        border-radius:  2px;
-    }
 
+form label {
+  width: 100px;
+  display: inline-block;
+}
 
-    #menu li:hover{
-        cursor: pointer;
-        background-color: darkgray;
-        color: black;
-    }
-    
-fieldset{
-    margin-left: 30px;
-    width: 500px;
-    border-radius: 5px;
+form input {
+	width: 200px;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.enLinea{
+	vertical-align: top;
+	display: inline-block;	
 }

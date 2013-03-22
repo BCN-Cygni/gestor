@@ -12,14 +12,9 @@
 <body>
 <header>
 	<div class="headerContent">
-		<div class="enLinea" style="width:70%;">
-			<?php 
-				if (isset($_SESSION["curso"]["titulo"]) && $_SESSION["curso"]["titulo"] !=""){
-					echo "<img src='/gestor/web/css/images/isotipo2.png' height='50px' style='margin-top: -18px;' class='enLinea' />"
-						."<span class='enLinea'>".$_SESSION["curso"]["titulo"]."</span>";
-				} else echo "<img src='/gestor/web/css/images/isotipo2.png' height='50px' style='margin-top: -18px;' class='enLinea' />
-							<span class='enLinea'>Aula Virtual Fiecyft</span>";
-			 ?>
+		<div class="enLinea">
+			<img src='/gestor/web/css/images/isotipo2.png' height='50px' style='margin-top: -18px;' class='enLinea' />
+			<span class='enLinea'>Gestor de Proyectos Cigny</span>";
 		</div>
 		<div class="enLinea">
 			<?php 
