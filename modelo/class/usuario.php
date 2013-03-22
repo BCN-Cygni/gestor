@@ -56,10 +56,7 @@ class Usuario{
 	public function setUser($user){
 		$this->user= $user;
 	}
-
-    public function login($txtUsuario, $txtCont){
-        
-    }
+    
 	//Fin de la CLase
 }
 
