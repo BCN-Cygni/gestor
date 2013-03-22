@@ -11,9 +11,10 @@ class Usuario{
 	private $nombre;
 	private $pass;
 	private $user;
+    private $usuarioDB;
 
 	function __construct(){
-
+        $this->usuarioDB = new UsuarioDB;
 	}
 
 	public function getApellido(){
@@ -55,7 +56,7 @@ class Usuario{
 
 	public function setUser($user){
 		$this->user= $user;
-	}
+	}        
     
 	//Fin de la CLase
 }
