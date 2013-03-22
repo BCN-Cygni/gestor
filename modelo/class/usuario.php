@@ -1,5 +1,7 @@
 <?php 
 
+include ("../dbClass/usuarioDB.php");
+
 class Usuario{
 
 	private $apellido;
@@ -55,6 +57,9 @@ class Usuario{
 		$this->user= $user;
 	}
 
+    public function login($txtUsuario, $txtCont){
+        
+    }
 	//Fin de la CLase
 }
 
