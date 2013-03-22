@@ -35,28 +35,46 @@ class UsuarioDB
 
     public function altaUsuario($usuario)
     {
-
-        $this->usuario->apellido = $usuario->apellido;
-        $this->usuario->nombre = $usuario->nombre;
-        $this->usuario->pass = $usuario->pass;
-        $this->usuario->email = $usuario->email;
-        $this->usuario->foto = $usuario->foto;
-        $this->usuario->nombre = $usuario->nombre;
-        $this->usuario->user = $usuario->user;
-
-        $query =    "INSERT INTO `usuario`
+       $query =    "INSERT INTO `usuario`
     					(`id_usuario`, `user`, `pass`, `apellido`, `nombre`,
                         `email`, `foto`) 
                     VALUES (
                     	NULL,
-                    	'$this->usuario->user',
-                    	'$this->usuario->pass',
-                    	'$this->usuario->apellido',
-                    	'$this->usuario->nombre',
-                    	'$this->usuario->email',
-                        '$this->usuario->foto'
+                    	'$usuario->user',
+                    	'$usuario->pass',
+                    	'$usuario->apellido',
+                    	'$usuario->nombre',
+                    	'$usuario->email',
+                        '$usuario->foto'
                     )";
+        if ($db->query($query)) return true;
+        else return false;
     }
+    
+    public function iniciarSesion($user, $pass)
+	{
+		$query = 	"SELECT * FROM usuario 
+					WHERE user = '$user'
+					AND pass = '$pass'";
+
+		if ($result = $this->db->query($query))
+		{
+			$fila = $result->fetch_assoc();
+			$this->usuario->id_usuario = $fila['id_usuario'];
+			$this->usuario->apellido = $fila['apellido'];
+			$this->usuario->nombre = $fila['nombrre'];
+			$this->usuario->pass = $fila['pass'];
+			$this->usuario->email = $fila['email'];
+			$this->usuario->user = $fila['user'];
+			$this->usuario->foto = $fila['foto'];
+							
+            return $usuario;
+		}
+        
+        
+  } 
+		
+
 }
 
 
