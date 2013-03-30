@@ -1,7 +1,5 @@
 <?php 
-include ("../modelo/class/usuario.php");
-include ("../modelo/dbClass/usuarioDB.php");
-
+include ("../modelo/usuario.php");
 class controlador{
             
     function __construct(){
@@ -21,6 +19,10 @@ class controlador{
     
     public function altaUsuario($arrayUsuario){
         Usuario::altaUsuario($arrayUsuario);
+    }
+
+    public function vistaLogin(){
+        require ("../vista/login.php");
     }
 }
 ?>
