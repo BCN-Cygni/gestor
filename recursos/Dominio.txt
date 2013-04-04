@@ -1,0 +1,7 @@
+Dominio temporal...
+
+Gente el dominio desde donde consultaran la pagina por el moomento sera
+
+   http://gestor.31i73.com.ar
+
+hasta que podamos eencontrar un dominio o comprar uno....
